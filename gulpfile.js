@@ -31,6 +31,7 @@ gulp.task('sass', function () {
     .pipe(sass())
     .pipe(rename('image-gallery.css'))
     .pipe(gulp.dest('./styles/css/'))
+    .pipe(gulp.dest('./build'))
     .pipe(livereload());
 });
 
@@ -39,6 +40,7 @@ gulp.task('sass-no-icon', function () {
     .pipe(sass())
     .pipe(rename('image-gallery-no-icon.css'))
     .pipe(gulp.dest('./styles/css/'))
+    .pipe(gulp.dest('./build'))
     .pipe(livereload());
 });
 
