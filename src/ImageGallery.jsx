@@ -33,6 +33,10 @@ export default class ImageGallery extends React.Component {
     this.slideToIndex = throttle(this._unthrottledSlideToIndex,
                                  props.slideDuration,
                                 {trailing: false});
+<<<<<<< Updated upstream
+=======
+    this._debounceResize = debounce(this._handleResize, 500);
+>>>>>>> Stashed changes
 
     if (props.lazyLoad) {
       this._lazyLoaded = [];
