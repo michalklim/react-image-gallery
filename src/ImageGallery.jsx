@@ -407,9 +407,10 @@ export default class ImageGallery extends React.Component {
 
     const debouncedResizeObserver = debounce(this._createResizeObserver, 300);
 
-    this.resizeObserver = new ResizeObserver(debouncedResizeObserver);
-
-    this.resizeObserver.observe(el);
+    if (el) {
+        this.resizeObserver = new ResizeObserver(debouncedResizeObserver);
+        this.resizeObserver.observe(el);
+    }
   };
 
   _createResizeObserver = (entries) => {

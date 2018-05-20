@@ -134,9 +134,10 @@ var ImageGallery = function (_React$Component) {
 
       var debouncedResizeObserver = (0, _lodash4.default)(_this._createResizeObserver, 300);
 
-      _this.resizeObserver = new _resizeObserverPolyfill2.default(debouncedResizeObserver);
-
-      _this.resizeObserver.observe(el);
+      if (el) {
+        _this.resizeObserver = new _resizeObserverPolyfill2.default(debouncedResizeObserver);
+        _this.resizeObserver.observe(el);
+      }
     };
 
     _this._createResizeObserver = function (entries) {
